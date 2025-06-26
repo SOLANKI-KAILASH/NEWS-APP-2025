@@ -53,7 +53,7 @@ class _HomepageState extends State<_Homepage> {
   Future<void> fetchHindiNews() async {
     final url = await http.get(
       Uri.parse(
-        'https://gnews.io/api/v4/top-headlines?category=general&lang=hi&country=in&max=10&apikey=15c6624717efc0b500612f9c563069ab',
+        'https://gnews.io/api/v4/top-headlines?category=general&lang=hi&country=in&max=10&apikey=7c48f528881294c4b3121e5097db8b7e',
       ),
     );
     var data = json.decode(url.body);
@@ -69,7 +69,7 @@ class _HomepageState extends State<_Homepage> {
   }
 
   Future<void> fetchEnglishNews() async{
-    final url = await http.get(Uri.parse("https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=in&max=10&apikey=15c6624717efc0b500612f9c563069ab"));
+    final url = await http.get(Uri.parse("https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=in&max=10&apikey=7c48f528881294c4b3121e5097db8b7e"));
     var data = json.decode(url.body);
     englishArticlesList.clear();
     for(int i=0;i<data["articles"].length;i++){
